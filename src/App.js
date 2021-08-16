@@ -5,7 +5,7 @@ import MainHeader from "./components/MainHeader";
 
 function App() {
   return (
-    <div>
+    <div style={{textAlign:"center"}}>
       <MainHeader />
       <Route path="/welcome">
         <Welcome />
