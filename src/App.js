@@ -3,20 +3,23 @@ import Welcome from "./pages/welcome";
 import Products from "./pages/Products";
 import MainHeader from "./components/MainHeader";
 import ProductDetail from "./pages/ProductDetail";
+import { Switch } from "react-router-dom";
 
 function App() {
   return (
     <div style={{textAlign:"center"}}>
       <MainHeader />
-      <Route path="/welcome">
+     <Switch>
+     <Route path="/welcome">
         <Welcome />
       </Route>
-      <Route path="/products">
+      <Route path="/products" exact>
         <Products />
       </Route>
-      <Route path="/product-detail/:productId">
+      <Route path="/products/:productId">
     <ProductDetail />
       </Route>
+     </Switch>
     </div>
   );
 }
