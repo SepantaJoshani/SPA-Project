@@ -11,7 +11,7 @@ const QuoteList = (props) => {
           <QuoteItem
             key={quote.id}
             id={quote.id}
-            author={quote.author}
+            author={quote.author} 
             text={quote.text}
           />
         ))}

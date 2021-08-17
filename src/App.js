@@ -19,7 +19,7 @@ function App() {
       <Route path="/new-quote">
         <NewQuote />
       </Route>
-    </Switch>
+    </Switch>  
     </Layout>
     
   );
