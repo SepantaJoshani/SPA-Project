@@ -15,14 +15,14 @@ const QuoteDetail = (props) => {
 
   const quote = DUMMY_QUOTES.find((item) => item.id === params.quoteId);
   if (!quote) {
-    return <p>Couldnt find the page </p>;
+    return <p>Couldn t find the page </p>;
   }
   return (
     <Fragment>
       <HighlightedQuote text={quote.text} author={quote.author} />
       <Route path={match.path} exact >
       <div className='centered'>
-        <Link className="btn--flat" to={`/quotes/${params.quoteId}/comments`}>Comments </Link>
+        <Link className="btn--flat" to={`${match.url}/comments`}>Comments </Link>
       </div>
       </Route>
       
