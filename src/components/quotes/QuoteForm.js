@@ -25,6 +25,10 @@ const QuoteForm = (props) => {
     setIsEntering(true);
   };
 
+  const sendDataHandler = ()=>{
+    setIsEntering(false)
+  }
+
   return (
     <Fragment>
       <Prompt when={isEntering} message={() => "Are you Sure ?"} />
@@ -49,7 +53,7 @@ const QuoteForm = (props) => {
             <textarea id="text" rows="5" ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button className="btn">Add Quote</button>
+            <button onClick={sendDataHandler} className="btn">Add Quote</button>
           </div>
         </form>
       </Card>
