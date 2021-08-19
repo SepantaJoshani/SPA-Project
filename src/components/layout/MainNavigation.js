@@ -1,10 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>SPA Train</div>
+      <div className={classes.logo}><Link style={{textDecoration:'none',color:"white"}} to='/quotes'>SPA TRAIN</Link></div>
       <nav className={classes.nav}>
         <ul>
           <li>
