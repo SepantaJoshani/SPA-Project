@@ -1,6 +1,12 @@
+import QuoteList from '../components/quotes/QuoteList'
 
-const AllQuote = props =>{
-return <h1>All Quotes</h1>
-}
+const DUMMY_QUOTES = [
+  { id: "q1", author: "Sepanta", text: "Watching Anime is Cool" },
+  { id: "q2", author: "Amin", text: "Watching Anime is Terrible :D" },
+];
 
-export default AllQuote
+const AllQuote = (props) => {
+  return <QuoteList quotes={DUMMY_QUOTES} />
+};
+
+export default AllQuote;
