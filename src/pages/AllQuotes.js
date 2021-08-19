@@ -9,4 +9,4 @@ const AllQuote = (props) => {
   return <QuoteList quotes={DUMMY_QUOTES} />
 };
 
-export default AllQuote;
+export default AllQuote
