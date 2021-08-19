@@ -1,10 +1,12 @@
-import { useRef } from 'react';
+import { Fragment, useRef, useState } from 'react';
+import { Prompt } from 'react-router-dom';
 
 import Card from '../UI/Card';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import classes from './QuoteForm.module.css';
 
 const QuoteForm = (props) => {
+  const [isEntered, setIsEntered] = useState(false)
   const authorInputRef = useRef();
   const textInputRef = useRef();
 
@@ -19,9 +21,15 @@ const QuoteForm = (props) => {
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
 
+  const formFocusHandler = ()=>{
+setIsEntered(true)
+  }
+
   return (
-    <Card>
-      <form className={classes.form} onSubmit={submitFormHandler}>
+   <Fragment>
+     <Prompt when={isEntered} message={()=>'Are you Sure ? All data Will Be Lost'} />
+     <Card>
+      <form onFocus={formFocusHandler} className={classes.form} onSubmit={submitFormHandler}>
         {props.isLoading && (
           <div className={classes.loading}>
             <LoadingSpinner />
@@ -41,6 +49,7 @@ const QuoteForm = (props) => {
         </div>
       </form>
     </Card>
+   </Fragment>
   );
 };
 
