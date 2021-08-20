@@ -24,7 +24,7 @@ if(status==='completed' &&!error){
     // send comment to server
 
     const enteredText = commentTextRef.current.value;
-    sendRequest({ text: enteredText },props.quoteId);
+    sendRequest({commentData:{ text: enteredText },quoteId:props.quoteId});
   };
 
   return (

@@ -56,7 +56,7 @@ comments =<p className="centered">
           onAddedComment={addedCommentHandler}
         />
       )}
-      <p>Comments...</p>
+     {comments}
     </section>
   );
 };
